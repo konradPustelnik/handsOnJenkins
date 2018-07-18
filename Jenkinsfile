@@ -4,10 +4,6 @@ pipeline {
     stage('Build') {
       parallel {
         stage('Build') {
-          environment {
-            a = '5'
-            b = '6'
-          }
           steps {
             echo 'Building'
             sh '''a=5
