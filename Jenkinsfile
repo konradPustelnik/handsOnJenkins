@@ -2,6 +2,10 @@ pipeline {
   agent any
   stages {
     stage('Build') {
+      environment {
+        a = '5'
+        b = '6'
+      }
       steps {
         echo 'Building'
         sh '''a=5
