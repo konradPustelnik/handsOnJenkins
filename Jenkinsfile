@@ -11,7 +11,9 @@ echo $a
 b=4
 echo $b
 echo ${a}
-echo ${b}'''
+echo ${b}
+
+### echo chujek'''
             sh '''echo ${a}
 echo ${b}'''
           }
