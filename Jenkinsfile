@@ -4,6 +4,12 @@ pipeline {
     stage('Build') {
       steps {
         echo 'Building'
+        sh '''a=5
+echo $a
+export b=4
+echo $b'''
+        sh '''echo $a
+echo $b'''
       }
     }
     stage('Test Chrome') {
