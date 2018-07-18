@@ -2,20 +2,30 @@ pipeline {
   agent any
   stages {
     stage('Build') {
-      environment {
-        a = '5'
-        b = '6'
-      }
-      steps {
-        echo 'Building'
-        sh '''a=5
+      parallel {
+        stage('Build') {
+          environment {
+            a = '5'
+            b = '6'
+          }
+          steps {
+            echo 'Building'
+            sh '''a=5
 echo $a
 b=4
 echo $b
 echo ${a}
 echo ${b}'''
-        sh '''echo ${a}
+            sh '''echo ${a}
 echo ${b}'''
+          }
+        }
+        stage('build1') {
+          steps {
+            sh '''echo $a
+echo ${b}'''
+          }
+        }
       }
     }
     stage('Test Chrome') {
