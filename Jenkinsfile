@@ -10,7 +10,7 @@ pipeline {
         echo 'Building'
         sh '''a=5
 echo $a
-export b=4
+b=4
 echo $b
 echo ${a}
 echo ${b}'''
