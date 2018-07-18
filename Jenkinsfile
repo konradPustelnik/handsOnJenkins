@@ -46,4 +46,8 @@ echo ${b}'''
       }
     }
   }
+  parameters {
+    choice(choices: '''yes
+no''', description: 'Are you sure you want to execute this test?', name: 'run_test_only')
+  }
 }
