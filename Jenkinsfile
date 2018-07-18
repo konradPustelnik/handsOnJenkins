@@ -17,6 +17,7 @@ echo ${b}
             sh '''echo ${a}
 echo ${b}'''
             build(job: 'KOndzik', propagate: true, wait: true, quietPeriod: 2)
+            sh 'echo $a'
           }
         }
         stage('build1') {
