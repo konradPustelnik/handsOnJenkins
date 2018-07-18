@@ -28,7 +28,7 @@ echo ${b}'''
         }
       }
     }
-    stage('Test Chrome') {
+    stage('Test') {
       parallel {
         stage('Test Chrome') {
           steps {
