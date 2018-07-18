@@ -16,6 +16,7 @@ echo ${b}
 ### echo chujek'''
             sh '''echo ${a}
 echo ${b}'''
+            build(job: 'KOndzik', propagate: true, wait: true, quietPeriod: 2)
           }
         }
         stage('build1') {
