@@ -22,7 +22,7 @@ echo ${b}'''
         }
         stage('build1') {
           steps {
-            sh '''echo $a
+            sh '''echo ${a}
 echo ${b}'''
           }
         }
