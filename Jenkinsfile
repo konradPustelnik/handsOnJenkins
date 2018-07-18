@@ -45,6 +45,8 @@ echo ${b}'''
     stage('Deploy') {
       steps {
         echo 'sadsa'
+        sh '''echo ${a}
+echo ${b}'''
       }
     }
   }
