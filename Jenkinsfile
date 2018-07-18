@@ -11,9 +11,11 @@ pipeline {
         sh '''a=5
 echo $a
 export b=4
-echo $b'''
-        sh '''${a}
-${b}'''
+echo $b
+echo ${a}
+echo ${b}'''
+        sh '''echo ${a}
+echo ${b}'''
       }
     }
     stage('Test Chrome') {
