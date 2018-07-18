@@ -8,8 +8,8 @@ pipeline {
 echo $a
 export b=4
 echo $b'''
-        sh '''echo $a
-echo $b'''
+        sh '''echo ${a}
+echo ${b}'''
       }
     }
     stage('Test Chrome') {
