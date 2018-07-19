@@ -5,6 +5,7 @@ pipeline {
       steps {
         sh '''
 a = 5
+echo 555
 echo $a
 echo $b'''
       }
