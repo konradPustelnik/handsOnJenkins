@@ -3,7 +3,9 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh '''a = 5
+        sh '''
+a = 5
+echo $a
 echo $b'''
       }
     }
@@ -28,6 +30,6 @@ echo $b'''
     }
   }
   environment {
-    b = '"$a"'
+    b = "$a"
   }
 }
