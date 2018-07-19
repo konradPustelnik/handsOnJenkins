@@ -3,7 +3,8 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        echo 'Building'
+        sh '''a = 5
+echo $b'''
       }
     }
     stage('Test') {
@@ -25,5 +26,8 @@ pipeline {
         echo 'sadsa'
       }
     }
+  }
+  environment {
+    b = '"$a"'
   }
 }
